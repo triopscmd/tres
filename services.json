@@ -1,0 +1,16 @@
+[
+  {
+    "name": "client",
+    "path": "client",
+    "startCommand": "npm run dev",
+    "port": 5173,
+    "isPrimary": true
+  },
+  {
+    "name": "server",
+    "path": "server",
+    "startCommand": "npm run dev",
+    "port": 3000,
+    "isPrimary": false
+  }
+]
