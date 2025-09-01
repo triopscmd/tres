@@ -1,0 +1,58 @@
+name: CI/CD Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Client Dependencies
+        run: |
+          cd client
+          npm install
+
+      - name: Build Client
+        run: |
+          cd client
+          npm run build
+
+      - name: Install Server Dependencies
+        run: |
+          cd server
+          npm install
+
+      - name: Build Server
+        run: |
+          cd server
+          npm run build
+
+      - name: Lint Check (Client)
+        run: |
+          cd client
+          npm run lint
+        continue-on-error: true # Allow build to pass even if lint fails initially
+
+      - name: Lint Check (Server)
+        run: |
+          cd server
+          npm run lint
+        continue-on-error: true # Allow build to pass even if lint fails initially
+
+      # Add steps for running tests here once they are implemented
+      # - name: Run Client Tests
+      #   run: |
+      #     cd client
+      #     npm test
+      # - name: Run Server Tests
+      #   run: |
+      #     cd server
+      #     npm test
