@@ -1,1 +1,14 @@
-[{}, {}]
+[
+  {
+    "name": "myService1",
+    "path": "./path/to/service1",
+    "startCommand": "node index.js",
+    "port": 3000
+  },
+  {
+    "name": "myService2",
+    "path": "./path/to/service2",
+    "startCommand": "npm start",
+    "port": 3001
+  }
+]
