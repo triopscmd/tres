@@ -1,14 +1,14 @@
 [
   {
-    "name": "myService1",
-    "path": "./path/to/service1",
-    "startCommand": "node index.js",
+    "name": "server",
+    "path": "./server",
+    "startCommand": "npm start",
     "port": 3000
   },
   {
-    "name": "myService2",
-    "path": "./path/to/service2",
-    "startCommand": "npm start",
-    "port": 3001
+    "name": "client",
+    "path": "./client",
+    "startCommand": "npm dev",
+    "port": 5173
   }
 ]
