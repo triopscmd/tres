@@ -1,1 +1,14 @@
-[{}, {}]
+[
+  {
+    "name": "service-frontend",
+    "path": "./frontend",
+    "startCommand": "npm start",
+    "port": 3000
+  },
+  {
+    "name": "service-backend",
+    "path": "./backend",
+    "startCommand": "node server.js",
+    "port": 8080
+  }
+]
