@@ -1,13 +1,13 @@
 [
   {
     "name": "service-frontend",
-    "path": "./frontend",
+    "path": "./client",
     "startCommand": "npm start",
     "port": 3000
   },
   {
     "name": "service-backend",
-    "path": "./backend",
+    "path": "./server",
     "startCommand": "node server.js",
     "port": 8080
   }
