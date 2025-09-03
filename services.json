@@ -1,14 +1,1 @@
-[
-  {
-    "name": "server",
-    "path": "./server",
-    "startCommand": "npm start",
-    "port": 3000
-  },
-  {
-    "name": "client",
-    "path": "./client",
-    "startCommand": "npm dev",
-    "port": 5173
-  }
-]
+[object Object],[object Object]
